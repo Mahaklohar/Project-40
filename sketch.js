@@ -62,14 +62,6 @@ function draw() {
   reset.mousePressed(()=>{
     player.updateCount(0);
     game.update(0)
-
-    var rest = database.ref('players');
-    rest.on("value", (data)=>{
-      resetPlr = data.val();
-    })
-
-    database.ref('/').update({
-      resetPlr: null
-    })
+    
   })
 }
